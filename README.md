@@ -103,39 +103,66 @@ SLOW (14.9888s): Monte Carlo Methods vs Deterministic Numerical Methods: A Compa
 ```
 
 Summary utilities:
-- `Tool_Caller_Agent/extract_counterfactual_stats.py` prints descriptive stats and a lognormal fit snippet.
-- `Analysis/Agent_Results_Stats.py` writes summary stats for the first 1335 usable FAST/SLOW samples.
+- `Tool_Caller_Agent/Agent_V3.py` prints descriptive stats and a lognormal fit snippet.
 
-## Reproducing paper outputs
-All commands are run from the repository root.
+[//]: # (- `Analysis/Agent_Results_Stats.py` writes summary stats for the first 1335 usable FAST/SLOW samples.)
 
-Recommended (pipeline runner):
-```bash
-python Analysis/Run_Paper_Outputs.py
-```
-This executes the following scripts in order:
-- `Analysis/DP_vs_TFG_V_Sweep.py`
-- `Analysis/Trace_ECDF.py`
-- `Analysis/Policy_GridSearch_vs_TFG.py`
-- `Analysis/Agent_Results_Stats.py`
-- `Analysis/Journal_Experiments.py`
+[//]: # (## Reproducing paper outputs)
 
-Individual scripts:
-```bash
-python Analysis/Journal_Experiments.py
-python Analysis/DP_vs_TFG_V_Sweep.py
-python Analysis/Policy_GridSearch_vs_TFG.py
-python Analysis/Trace_ECDF.py
-python Analysis/Premium_Priority_Table.py
-```
+[//]: # (All commands are run from the repository root.)
 
-### Experiment outputs
-- Main table (D1): `Results/Journal/main_table/main_table.csv`
-- Load sweep (D2): `Results/Journal/load_sweep/utility_vs_lambda.png`, `Results/Journal/load_sweep/dmr_vs_lambda.png`
-- Epsilon trade-off (D3): `Results/Journal/epsilon_tradeoff/tfg_epsilon_pareto.png`
-- ECDF plots: `Results/Trace_ECDF/ecdf_fast_vs_slow.png`, `Results/Trace_ECDF/ecdf_fast_vs_slow_by_prompt_type.png`
-- Premium priority table: `Results/Journal/premium_table/premium_policy_table.csv`
-- Agent stats table: `Results/Agent_Stats/agent_results_stats.csv`
+[//]: # ()
+[//]: # (Recommended &#40;pipeline runner&#41;:)
+
+[//]: # (```bash)
+
+[//]: # (python Analysis/Run_Paper_Outputs.py)
+
+[//]: # (```)
+
+[//]: # (This executes the following scripts in order:)
+
+[//]: # (- `Analysis/DP_vs_TFG_V_Sweep.py`)
+
+[//]: # (- `Analysis/Trace_ECDF.py`)
+
+[//]: # (- `Analysis/Policy_GridSearch_vs_TFG.py`)
+
+[//]: # (- `Analysis/Agent_Results_Stats.py`)
+
+[//]: # (- `Analysis/Journal_Experiments.py`)
+
+[//]: # ()
+[//]: # (Individual scripts:)
+
+[//]: # (```bash)
+
+[//]: # (python Analysis/Journal_Experiments.py)
+
+[//]: # (python Analysis/DP_vs_TFG_V_Sweep.py)
+
+[//]: # (python Analysis/Policy_GridSearch_vs_TFG.py)
+
+[//]: # (python Analysis/Trace_ECDF.py)
+
+[//]: # (python Analysis/Premium_Priority_Table.py)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### Experiment outputs)
+
+[//]: # (- Main table &#40;D1&#41;: `Results/Journal/main_table/main_table.csv`)
+
+[//]: # (- Load sweep &#40;D2&#41;: `Results/Journal/load_sweep/utility_vs_lambda.png`, `Results/Journal/load_sweep/dmr_vs_lambda.png`)
+
+[//]: # (- Epsilon trade-off &#40;D3&#41;: `Results/Journal/epsilon_tradeoff/tfg_epsilon_pareto.png`)
+
+[//]: # (- ECDF plots: `Results/Trace_ECDF/ecdf_fast_vs_slow.png`, `Results/Trace_ECDF/ecdf_fast_vs_slow_by_prompt_type.png`)
+
+[//]: # (- Premium priority table: `Results/Journal/premium_table/premium_policy_table.csv`)
+
+[//]: # (- Agent stats table: `Results/Agent_Stats/agent_results_stats.csv`)
 
 ### Configuration points
 - Global defaults: `Configurations.py`
