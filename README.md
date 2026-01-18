@@ -17,7 +17,7 @@ The outputs are designed for publication-quality figures and tables. The propose
 - AlwaysFast (AF)
 - AlwaysSlow (AS)
 - StaticMix (p=0.5)
-- QueueThreshold (tau=5)
+- QueueThreshold (Q0=5)
 - DriftPenaltyMyopic (V=1.0)
 - TTL-aware heuristic
 - Proposed: TFG* (Tool-Feasibility Gating; epsilon can be fixed or adaptive)

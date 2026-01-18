@@ -50,7 +50,7 @@ POLICY_LABELS = {
     "Fcfs_Always_Fast": "AlwaysFast (AF)",
     "Fcfs_Always_Slow": "AlwaysSlow (AS)",
     "Static_Mix_Policy": "StaticMix (p=0.5)",
-    "Queue_Threshold_Policy": "QueueThreshold (tau=5)",
+    "Queue_Threshold_Policy": "QueueThreshold (Q0=5)",
     "Drift_Penalty_Myopic_Policy": "DriftPenaltyMyopic (V=1.0)",
     "Baseline_Heuristic_Policy": "TTL-aware heuristic",
     "TFGPolicy": "TFG*",

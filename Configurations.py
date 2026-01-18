@@ -106,10 +106,10 @@ class Policy_Config:
                                                                           
     tfg_adaptive_epsilon_enabled_bool: bool = False
     tfg_adaptive_epsilon_window_i32: int = 25
-    tfg_adaptive_epsilon_kp_f64: float = 0.02
-    tfg_adaptive_epsilon_ki_f64: float = 0.002
-    tfg_adaptive_epsilon_min_f64: float = -.10
-    tfg_adaptive_epsilon_max_f64: float =  .10
+    tfg_adaptive_epsilon_kp_f64:        float = 0.02
+    tfg_adaptive_epsilon_ki_f64:        float = 0.002
+    tfg_adaptive_epsilon_min_f64:       float = -.10
+    tfg_adaptive_epsilon_max_f64:       float =  .10
 
                                       
                                                                       
@@ -117,7 +117,7 @@ class Policy_Config:
     tfg_wait_estimator: str = "mix"                           
 
                                               
-    tfg_queue_slow_mix_p: float = 0.55                                                     
+    tfg_queue_slow_mix_p: float = 0.55
 
                                                                             
     tfg_include_in_service: bool = True
@@ -137,8 +137,8 @@ class Simulation_Config:
     until_time_f64                : float = 100_000.0
     warmup_time_f64               : float = 1000.0
     drop_expired_in_queue_bool    : bool  = True
-    priority_task_rate_f64        : float = 0.10
-    priority_first_enabled_bool   : bool  = True
+    priority_task_rate_f64        : float = 0.0
+    priority_first_enabled_bool   : bool  = False
 
     arrival_config : Arrival_Config = Arrival_Config(
         lambda_rate_f64=0.05,
@@ -147,7 +147,7 @@ class Simulation_Config:
 
     ttl_ttl_config : Ttl_Config = Ttl_Config(
         ttl_seconds_f64=35.0,
-        ttl_std_f64=10.0,
+        ttl_std_f64=0.0,
         ttl_min_f64=0.05,
     )
 
